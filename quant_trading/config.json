@@ -1,0 +1,13 @@
+{
+    "atr_initial_multiplier": 2.0,
+    "atr_trailing_multiplier": 2.5,
+    "max_risk_per_trade": 0.01,
+    "max_portfolio_exposure": 0.50,
+    "max_sector_exposure": 0.20,
+    "max_positions": 5,
+    "max_daily_loss": 0.03,
+    "max_drawdown": 0.10,
+    "momentum_threshold": 0.005,
+    "volume_multiplier": 1.5,
+    "vix_high_risk_threshold": 22.0
+}
