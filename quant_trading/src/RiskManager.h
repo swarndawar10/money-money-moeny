@@ -49,8 +49,15 @@ public:
     // Update an open position with the latest price/ATR. Fires exit if stop hit.
     void updatePositions(const std::string& ticker, double currentPrice, double atr);
 
+    // ── Risk state evaluation ─────────────────────────────────────────────────
+    // Must be called on EVERY tick, regardless of whether a strategy signal
+    // exists. Calculates current equity, updates peak equity, and evaluates
+    // drawdown and daily-loss circuit breakers.
+    // Idempotent: calling multiple times with no state change is safe.
+    void evaluateRisk();
+
     // ── Entry signal ──────────────────────────────────────────────────────────
-    // Called AFTER updatePositions for the same tick.
+    // Called AFTER updatePositions and evaluateRisk for the same tick.
     // atr == 0 or NaN → rejected with ATR_INVALID.
     void processSignal(const std::string& ticker,
                        double currentPrice,
@@ -58,9 +65,13 @@ public:
                        const std::string& sector,
                        Signal sig);
 
-    // ── Accessors ─────────────────────────────────────────────────────────────
-    double getCash()   const { return cash; }
-    double getEquity() const;  // cash + sum(qty * currentPrice) for all positions
+    // ── Read-only accessors ───────────────────────────────────────────────────
+    double getCash()       const { return cash; }
+    double getEquity()     const;  // cash + sum(qty * currentPrice)
+    double getPeakEquity() const { return peak_equity; }
+    bool isDailyLossLocked() const { return daily_loss_locked; }
+    bool isDrawdownLocked()  const { return drawdown_locked; }
+    bool areEntriesAllowed() const { return entriesAllowed(); }
 
 private:
     Config config;

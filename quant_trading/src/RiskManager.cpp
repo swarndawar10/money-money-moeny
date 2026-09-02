@@ -154,6 +154,18 @@ void RiskManager::updateRegime(const std::string& regime_status) {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
+// Public risk evaluation — must be called on EVERY tick, regardless of whether
+// the strategy produced a BUY signal.
+//
+// Idempotent: locks only transition false→true, peak_equity only increases.
+// Calling this multiple times with no state change is safe.
+// ──────────────────────────────────────────────────────────────────────────────
+void RiskManager::evaluateRisk() {
+    double equity = getEquity();
+    evaluateCircuitBreakers(equity);
+}
+
+// ──────────────────────────────────────────────────────────────────────────────
 // Update a position with the latest price and ATR.
 // Fires the appropriate stop if triggered.
 // Exits continue regardless of any lock flag.
@@ -212,8 +224,7 @@ void RiskManager::processSignal(const std::string& ticker,
     // ── 2. Already holding this ticker? ──────────────────────────────────────
     if (positions.count(ticker)) return;
 
-    // ── 3. Evaluate circuit breakers AFTER positions are current ─────────────
-    //    (Called before processSignal in main.cpp, but call again to be safe)
+    // ── 3. Defensive re-evaluation (idempotent — primary call is evaluateRisk())
     double equity = getEquity();
     evaluateCircuitBreakers(equity);
 

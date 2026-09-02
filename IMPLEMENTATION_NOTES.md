@@ -42,3 +42,14 @@ During the previous backtest, the circuit breaker tripped on Day 2 and repeatedl
   * `sector_exposure = (existing_sector_mval + new_pos_val) / equity <= max_sector_exposure` (20%)
   * `portfolio_exposure = (total_invested_mval + new_pos_val) / equity <= max_portfolio_exposure` (50%)
 * Positions track their `sector` label directly.
+
+## 7. Final Correctness Pass: Tick-Independent Circuit Breakers
+* **Previous Flaw:** Circuit breakers were evaluated inside `RiskManager::processSignal()`. If the strategy emitted `Signal::NONE`, the circuit breakers were bypassed on that tick.
+* **The Fix:** Created `RiskManager::evaluateRisk()`. It calculates current portfolio equity, updates peak equity, evaluates drawdown and daily loss, and maintains lock semantics.
+* **Deterministic Pipeline in `main.cpp`:**
+  1. `onTimestamp(timestamp)`
+  2. `updatePositions(ticker, price, atr)`
+  3. `evaluateRisk()` (runs unconditionally on EVERY tick)
+  4. `strategy.processTick(...)`
+  5. `processSignal(...)`
+* **Safe Read-Only Accessors:** Added `isDailyLossLocked()`, `isDrawdownLocked()`, `areEntriesAllowed()`, and `getPeakEquity()` to verify risk state deterministically with strict assertions rather than visual log inspection.

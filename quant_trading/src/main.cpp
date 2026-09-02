@@ -85,9 +85,9 @@ int main() {
                 // 2. Update open position prices & evaluate exits
                 riskManager.updatePositions(ticker, price, atr);
 
-                // 3. Evaluate circuit breakers against current equity
-                //    (done inside processSignal; also triggered in updatePositions
-                //     implicitly via equity after closing positions)
+                // 3. Evaluate circuit breakers against current equity.
+                //    This runs on EVERY tick regardless of strategy signal.
+                riskManager.evaluateRisk();
 
                 // 4. Generate strategy signal
                 Signal sig = strategy.processTick(ticker, price, volume, atr, timestamp, sector);
