@@ -10,5 +10,19 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(json)
 
-add_executable(QuantTradingEngine src/main.cpp src/StrategyEngine.cpp src/RiskManager.cpp)
+# Main engine
+add_executable(QuantTradingEngine
+    src/main.cpp
+    src/StrategyEngine.cpp
+    src/RiskManager.cpp
+)
 target_link_libraries(QuantTradingEngine PRIVATE nlohmann_json::nlohmann_json)
+
+# Test harness (no external framework — self-contained)
+add_executable(RunTests
+    src/tests/test_risk.cpp
+    src/StrategyEngine.cpp
+    src/RiskManager.cpp
+)
+target_link_libraries(RunTests PRIVATE nlohmann_json::nlohmann_json)
+target_include_directories(RunTests PRIVATE src)

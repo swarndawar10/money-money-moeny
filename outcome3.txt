@@ -1,0 +1,91 @@
+RISK-FIRST BACKTEST v3 — Initial Capital: Rs. 500,000.00
+------------------------------------------------------------
+[2019-01-21] BUY  ABBOTINDIA | Qty:   17 | Cost:Rs. 139619.30 | Stop:Rs.7933.28
+[2019-01-21] BUY  ALKYLAMINE | Qty:  281 | Cost:Rs.  94022.60 | Stop:Rs.316.87
+[2019-01-21] BUY  ASIANPAINT | Qty:   11 | Cost:Rs.  15643.10 | Stop:Rs.1380.80
+[2019-01-21] BUY  BALAMINES  | Qty:    1 | Cost:Rs.    500.40 | Stop:Rs.469.66
+[2019-01-22] BUY  BORORENEW  | Qty:    4 | Cost:Rs.    313.40 | Stop:Rs.74.37
+[2019-01-25] SELL ASIANPAINT | INITIAL_STOP   | PnL: Rs.   -549.45
+[2019-01-25] SELL BALAMINES  | INITIAL_STOP   | PnL: Rs.    -40.05
+[2019-01-25] SELL BORORENEW  | INITIAL_STOP   | PnL: Rs.    -19.00
+[2019-01-25] BUY  BRITANNIA  | Qty:    5 | Cost:Rs.  16033.25 | Stop:Rs.3095.77
+[2019-01-25] BUY  CDSL       | Qty:    7 | Cost:Rs.   1631.35 | Stop:Rs.223.22
+[2019-01-25] BUY  CESC       | Qty:    2 | Cost:Rs.    137.70 | Stop:Rs.65.73
+[2019-01-28] SELL ALKYLAMINE | INITIAL_STOP   | PnL: Rs.  -9469.70
+[2019-01-28] BUY  AARTIIND   | Qty:  226 | Cost:Rs.  88467.70 | Stop:Rs.373.97
+[2019-01-29] SELL CDSL       | INITIAL_STOP   | PnL: Rs.   -101.85
+[2019-01-29] BUY  BANKBARODA | Qty:   22 | Cost:Rs.   2502.50 | Stop:Rs.106.57
+[2019-02-08] SELL AARTIIND   | TRAILING_STOP  | PnL: Rs.    745.80
+[2019-02-08] SELL BANKBARODA | INITIAL_STOP   | PnL: Rs.   -194.70
+[2019-02-08] BUY  3MINDIA    | Qty:    4 | Cost:Rs.  85329.80 | Stop:Rs.20507.93
+[2019-02-08] BUY  ABFRL      | Qty:   27 | Cost:Rs.   5640.30 | Stop:Rs.193.92
+[2019-02-11] SELL ABBOTINDIA | INITIAL_STOP   | PnL: Rs.  -9290.50
+[2019-02-11] BUY  AIAENG     | Qty:   50 | Cost:Rs.  83397.50 | Stop:Rs.1572.91
+[2019-02-12] SELL BRITANNIA  | INITIAL_STOP   | PnL: Rs.   -990.25
+[2019-02-12] BUY  ALLCARGO   | Qty: 2543 | Cost:Rs.  66118.00 | Stop:Rs.24.42
+[2019-02-18] SELL CESC       | TRAILING_STOP  | PnL: Rs.     -5.30
+[2019-02-19] BUY  BRIGADE    | Qty:    1 | Cost:Rs.    131.85 | Stop:Rs.121.88
+[2019-04-04] SELL ALLCARGO   | TRAILING_STOP  | PnL: Rs.   3305.90
+[2019-04-04] BUY  ALLCARGO   | Qty: 2251 | Cost:Rs.  61452.30 | Stop:Rs.25.20
+[2019-04-08] SELL AIAENG     | TRAILING_STOP  | PnL: Rs.   1467.50
+[2019-04-08] BUY  ABB        | Qty:   77 | Cost:Rs.  84049.35 | Stop:Rs.1045.48
+[2019-04-23] SELL ABFRL      | TRAILING_STOP  | PnL: Rs.     39.15
+[2019-04-24] BUY  BANDHANBNK | Qty:    1 | Cost:Rs.    605.50 | Stop:Rs.570.78
+[2019-04-25] SELL BRIGADE    | TRAILING_STOP  | PnL: Rs.     21.90
+[2019-04-25] BUY  BIOCON     | Qty:    1 | Cost:Rs.    310.10 | Stop:Rs.298.48
+[2019-04-26] SELL 3MINDIA    | TRAILING_STOP  | PnL: Rs.   8713.80
+[2019-04-26] BUY  3MINDIA    | Qty:    4 | Cost:Rs.  94043.60 | Stop:Rs.22348.90
+[2019-04-30] SELL BIOCON     | INITIAL_STOP   | PnL: Rs.    -13.35
+[2019-04-30] BUY  AARTIIND   | Qty:   14 | Cost:Rs.   5679.10 | Stop:Rs.383.93
+[2019-05-02] SELL ALLCARGO   | TRAILING_STOP  | PnL: Rs.  -1800.80
+[2019-05-02] BUY  AJANTPHARM | Qty:   83 | Cost:Rs.  59365.75 | Stop:Rs.678.62
+[2019-05-08] SELL BANDHANBNK | TRAILING_STOP  | PnL: Rs.    -34.25
+[2019-05-08] BUY  AAVAS      | Qty:    1 | Cost:Rs.   1426.60 | Stop:Rs.1305.89
+[2019-05-09] SELL ABB        | TRAILING_STOP  | PnL: Rs.   -608.30
+[2019-05-09] BUY  ALKEM      | Qty:   46 | Cost:Rs.  79354.60 | Stop:Rs.1620.62
+[2019-05-21] SELL AJANTPHARM | INITIAL_STOP   | PnL: Rs.  -3133.25
+[2019-05-21] BUY  ABB        | Qty:   58 | Cost:Rs.  64797.60 | Stop:Rs.1049.24
+[2019-06-12] SELL 3MINDIA    | TRAILING_STOP  | PnL: Rs.  -4286.60
+[2019-06-12] BUY  ACE        | Qty:  560 | Cost:Rs.  58212.00 | Stop:Rs.95.19
+[2019-06-13] SELL AARTIIND   | TRAILING_STOP  | PnL: Rs.    376.60
+[2019-06-13] BUY  AARTIIND   | Qty:   80 | Cost:Rs.  34604.00 | Stop:Rs.405.49
+[2019-06-21] SELL ACE        | INITIAL_STOP   | PnL: Rs.  -5376.00
+[2019-06-21] BUY  3MINDIA    | Qty:    2 | Cost:Rs.  47059.20 | Stop:Rs.22514.45
+[2019-06-27] SELL ALKEM      | TRAILING_STOP  | PnL: Rs.  -1959.60
+[2019-06-27] BUY  ABBOTINDIA | Qty:    9 | Cost:Rs.  80231.40 | Stop:Rs.8510.97
+[2019-07-05] SELL ABB        | TRAILING_STOP  | PnL: Rs.   5130.10
+[2019-07-05] BUY  ABB        | Qty:   65 | Cost:Rs.  78367.25 | Stop:Rs.1139.99
+[2019-07-08] SELL 3MINDIA    | INITIAL_STOP   | PnL: Rs.  -2842.50
+[2019-07-08] BUY  ALKEM      | Qty:   26 | Cost:Rs.  46072.00 | Stop:Rs.1681.85
+[2019-07-09] SELL AARTIIND   | TRAILING_STOP  | PnL: Rs.  -1148.00
+[2019-07-09] BUY  ADANIPOWER | Qty:  504 | Cost:Rs.  33843.60 | Stop:Rs.61.28
+[2019-07-18] SELL ABB        | INITIAL_STOP   | PnL: Rs.  -4465.50
+[2019-07-18] BUY  AIAENG     | Qty:   44 | Cost:Rs.  77360.80 | Stop:Rs.1669.87
+[2019-07-19] SELL ADANIPOWER | INITIAL_STOP   | PnL: Rs.  -3124.80
+[2019-07-19] BUY  AMBER      | Qty:   37 | Cost:Rs.  30826.55 | Stop:Rs.793.14
+[2019-07-29] SELL ABBOTINDIA | INITIAL_STOP   | PnL: Rs.  -4258.80
+[2019-07-29] BUY  BDL        | Qty:  404 | Cost:Rs.  61630.20 | Stop:Rs.141.08
+[2019-07-30] SELL AMBER      | INITIAL_STOP   | PnL: Rs.  -1874.05
+[2019-07-30] BUY  ASTRAZEN   | Qty:   23 | Cost:Rs.  45727.45 | Stop:Rs.1859.43
+[2019-08-01] 🚨 DRAWDOWN CB TRIPPED | Equity: Rs.456,266 | Peak: Rs.507,403 | DD: 10.08%
+[2019-08-02] SELL ALKEM      | INITIAL_STOP   | PnL: Rs.  -2382.90
+[2019-08-06] SELL AIAENG     | INITIAL_STOP   | PnL: Rs.  -6061.00
+[2019-08-06] SELL ASTRAZEN   | INITIAL_STOP   | PnL: Rs.  -3157.90
+[2019-08-21] SELL AAVAS      | TRAILING_STOP  | PnL: Rs.     31.95
+[2019-08-22] SELL BDL        | INITIAL_STOP   | PnL: Rs.  -7272.00
+============================================================
+FINAL EQUITY:          Rs.   445,372.30
+NET PROFIT:            Rs.   -54,627.70  (-10.93%)
+CAGR:                  -2.09%
+MAX DRAWDOWN:          12.23%
+TOTAL TRADES:          36
+WIN RATE:              25.00%
+PROFIT FACTOR:         0.266
+AVERAGE TRADE:         Rs.   -1517.44
+LARGEST WIN:           Rs.    8713.80
+LARGEST LOSS:          Rs.   -9469.70
+MAX CONSEC. LOSSES:    9
+
+NOTE: Backtest uses daily bars. The momentum strategy is designed for
+intraday data. Results should NOT be treated as a reliable performance
+forecast. Transaction costs and slippage are not modelled.

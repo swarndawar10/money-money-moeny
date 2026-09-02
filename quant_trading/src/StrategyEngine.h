@@ -14,20 +14,29 @@ enum class Signal {
 
 struct Tick {
     double price;
-    long volume;
+    long   volume;
     double atr;
-    long timestamp;
+    long   timestamp;
 };
 
 class StrategyEngine {
 public:
-    StrategyEngine(const Config& cfg);
-    Signal processTick(const std::string& ticker, double price, long volume, double atr, long timestamp);
+    explicit StrategyEngine(const Config& cfg);
+
+    // Returns BUY signal if momentum + volume criteria are met.
+    // atr is passed through for reference; validation happens in RiskManager.
+    // sector is passed through so it travels with the signal to the RiskManager.
+    Signal processTick(const std::string& ticker,
+                       double price,
+                       long   volume,
+                       double atr,
+                       long   timestamp,
+                       const std::string& sector);
 
 private:
     Config config;
     std::unordered_map<std::string, std::deque<Tick>> history;
-    const int WINDOW_SIZE = 5; // Lookback period for momentum
+    static constexpr int WINDOW_SIZE = 5;
 };
 
 #endif
